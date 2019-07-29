@@ -1,0 +1,95 @@
+Data Hackathon Jul-19 Use Cases
+Use Case 1
+Match and get NAICS codes of the company matching the attributes of the company to the NAICS title. Output should be csv with company name and NAICS codes.
+
+Use Case 1 Resources
+Link to know about NAICS code : https://www.naics.com/what-is-a-naics-code-why-do-i-need-one/ 
+
+Company dataset : https://www.kaggle.com/peopledatalabssf/free-7-million-company-dataset/downloads/free-7-million-company-dataset.zip/1
+
+NAICS code dataset : https://www.kaggle.com/rakeshchintha/naics-soc/downloads/naics-soc.zip/3
+
+https://www.naics.com/what-is-a-naics-code-why-do-i-need-one/
+
+Use Case 1 Rules
+You can use the training dataset to develop the code or model. Code / Model should accept company name and description / LOB of the company and give NAICS code as output.
+Company Description can be in words or sentence. No restriction on word count for name and description.
+One company can have more than one LOB / Description. We need one NAICS if the LOB is similar if not different NAICS for each LOB.
+Developed code or model will be tested against the test set. We will not share the test set with the team.
+Code / Model will be evaluated based on Accuracy and Approach.
+If the code / Model does not provide output for any reason like bug, exception, performance issues will lose marks.
+We will test in batch mode. (Input and output should be CSV)
+Use Case 2
+Score for given Employers or companies on the following categories based on Employee Reviews. Scoring in the scale 1 to 5 only integers. 1 - Very Low, 2 - Low, 3 - Neutral, 4 - High and 5 - Very High. If enough data not found against the category, then report 0.
+
+Categories:
+
+Benefits & Compensation
+Work - Life Balance
+Learning & Growth Opportunities
+Harassment, Discrimination, Bias
+Working conditions, Safety and Employee Care
+Business and Social Ethics of the Employer
+Use Case 2 Resources:
+We are providing some employee reviews for some companies which you can use for your training. You can also get yourselves employee reviews from any source to have a proper training dataset. We are providing multiple JSON files in a zip file and each JSON file contains employee reviews of a single Company. It has some entries with certain ratings but they are of no relevance for our Hackathon.
+
+Link to the file:
+
+https://iseec-data-hackathon.s3.ap-south-1.amazonaws.com/Data-Hackathon-2019/employee_reviews.zip
+
+Use Case 2 Rules:
+You can use the training dataset to develop the code or model.
+Code / Model should accept Employees / Former Employees Reviews of a company and should give scores against each category as output.
+Employee Reviews input from different sources will vary with respect to the way they provide. Dataset provided reveals so. You have to take the reviews accordingly and able to use it. Do not use the ratings provided by the users or sources into consideration. Use the review descriptions and text only.
+Developed code or model will be tested against the test set of companies and its employee reviews. The scoring provided by the code / model will be evaluated by the judges on accuracy.
+Code / Model will be evaluated based on Accuracy and Approach.
+If the code / Model does not provide output for any reason like bug, exception, performance issues will lose marks
+Use Case 3
+Identify duplicate articles by content. Given a set of web articles, group them by similarity. (if 2 different articles are talking about Modi winning in 2019, then it should be grouped together)
+
+Use Case 3 Resources:
+Use any site to scrape the articles. Ideal sites are news aggregators like google news, inshorts.com.
+
+Rules:
+
+As part of the problem solving you should gather and prepare the train data set and test data set.
+Should be able to demonstrate the results on the test data
+Should able to establish the accuracy of the model
+Code / Model will be evaluated based on Accuracy and Approach.
+If the code / Model does not provide output for any reason like bug, exception, performance issues will lose marks
+ 
+
+Use Case 4: 
+Determine which elements (features) are positively correlated to Loss_ALAE_Ratio
+
+of the given dataset.
+
+Use Case 4 Resources:
+Using the Intellect FABRIC Data Services API generate elements / features (independent variables) for the full dataset from HazardHub, especially building features.
+
+API Details:
+
+You need Post the Submission request with Address and it will provide a report ID. Subsequently you need Get the report by providing the report ID you got from the submission request.
+
+https://iseec-data-hackathon.s3.ap-south-1.amazonaws.com/Data-Hackathon-2019/IBDHazardHubAPI.txt
+
+ 
+
+Dataset from HazardHub:
+
+https://iseec-data-hackathon.s3.ap-south-1.amazonaws.com/Data-Hackathon-2019/Dataset.xls
+
+Hint: You may “bin” the Loss_ALAE_Ratio to codes (non-continuous) to make it easier to determine what features / elements are more correlated. Note a company with higher Loss_ALAE_Ratio is worse.
+
+ALAE:  Allocated Loss Adjustment Expenses
+
+Loss_ALAE_Ratio:  Loss to ALAE ratio
+
+Link to explain Allocated Loss Adjustment Expenses:
+
+https://www.investopedia.com/terms/a/allocated-loss-adjustment-expenses-alae.asp
+
+ 
+
+Use Case 4 Rules:
+Only use the Intellect Fabric Dataservice API to generate the elements / features
